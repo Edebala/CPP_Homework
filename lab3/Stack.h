@@ -7,7 +7,6 @@ private:
 	List elements;
 public:
 	Stack(){}
-	~Stack();
 	void push(int e);
 	int pop();
 	bool isEmpty() const;
