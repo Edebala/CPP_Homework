@@ -1,0 +1,39 @@
+FEJLETT PROGRAMOZÁSI TECHNIKÁK (C++)
+9. GYAKORLAT
+________________________________________________________________________________
+
+Algoritmusok és lambdák
+Az alábbi feladatok mindenikét oldja meg algoritmusok és lambda kifejezések használatával (nem
+használhat ciklust)!
+1. Adott egy gyümölcsneveket tartalmazó dinamikus tömb.
+Határozza meg, hogy van-e olyan gyümölcsnév, amely tartalmaz egy adott karakterláncot? Pl.
+“berry” (find_if algoritmus)
+2. Adott egy egész számokat tartalmazó dinamikus tömb. Készítsen kódrészletet, amelyben eldönti,
+hogy páros-e a tömb minden eleme (all_of algoritmus).
+3. Adott egy egész számokat tartalmazó dinamikus tömb. Készítsen kódrészletet, amelyben
+megduplázza a tömb minden egyes elemét (for_each algoritmus).
+4. Adott a következő hónapok neveit tartalmazó tömb. Készítsen kódrészletet, amelyben
+meghatározza az öt betűből álló hónapok számát.
+vector<string> months {
+"January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"
+};
+5. Adott egy valós számokat tartalmazó dinamikus tömb. Rendezze a tömböt csökkenő sorrendbe.
+Az összehasonlító függvényt adja meg kétféleképpen:
+● Lambda kifejezéssel
+● Használja a fejállományban deklarált greater<> funktort!
+6. Készítsen egy olyan dinamikus tömböt, amely tartalmazza az év hónapjait átlaghőmérséklettel
+együtt (pair struktúra). Rendezze a tömböt átlaghőmérséklet szerint növekvő sorrendbe!
+7. Rendezzen egy valós számokat tartalmazó dinamikus tömböt az elemek abszolút értékei szerint
+növekvő sorrendbe!
+
+FEJLETT PROGRAMOZÁSI TECHNIKÁK (C++)
+9. GYAKORLAT
+________________________________________________________________________________
+8. Alakítsa át a hónapokat tartalmazó tömböt úgy, hogy minden szó kisbetűvel kezdődjön.
+9. Furcsa ábécé
+● Keverje össze az angol ábécé betűit előállítva ezzel egy furcsa ábécét
+(random_shuffle)!
+● Rendezze a kisbetűs hónapneveket a furcsa ábécé szerint!
+
+

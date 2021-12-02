@@ -1,0 +1,51 @@
+FEJLETT PROGRAMOZÁSI TECHNIKÁK (C++)
+Cél:
+● Osztályok és objektumok
+● A standard könyvtár:
+○ A dinamikus tömb: vector<T> (#include <vector>)
+○ Algoritmusok: max_element, min_element, sort, unique
+(#include <algorithm>)
+
+I. A dinamikus tömb
+//Definíció - üres dinamikus tömb
+vector<int> v;
+//Feltöltés: új elem hozzáadása: push_back VAGY emplace_back
+for( int i=0; i<10; ++i ){
+v.push_back( i * 10 );
+}
+//Kiíratás
+for(int i=0; i<v.size(); ++i ){
+cout<<v[ i ]<<" ";
+}
+cout<<endl;
+
+II. Algoritmusok
+http://www.cplusplus.com/reference/algorithm/
+
+III. Kitűzött feladat
+Adott a következő Point.h állomány.
+Point.h
+
+Implementálja a tagfüggvényeket egy Point.cpp állományban.
+Készítsen egy olyan ponthalmaz osztályt, amely páronként különböző pontokat tartalmaz. Ehhez
+adott egy PointSet.h állomány.
+1. Készítse el az osztály implementációját egy PointSet.cpp állományban.
+2. Ellenőrizze, hogy az n növekedésével hogyan sűrűsödnek a pontok a ponthalmazban. Ehhez
+használhatja a következő kódrészletet:
+int n = 2;
+cout<<"Pontok\tMinTav\t MaxTav\t
+#tavolsagok\t#kulonbozotavolsagok"<<endl;
+cout<< fixed;
+for( int i= 0; i<12; ++i ){
+PointSet pSet( n );
+cout<<setw(6)<<n<<" ";
+cout<<setw(8)<<setprecision(2)<<pSet.minDistance()<<" ";
+cout<<setw(8)<<setprecision(2)<<pSet.maxDistance()<<" ";
+cout<<setw(10) << pSet.numDistances()<<" ";
+cout<<setw(16) << pSet.numDistinctDistances()<<endl;
+n = n << 1;
+}
+3. Milyen n értékre jelenik meg a legközelebbi pontokra az 1-es távolság?
+4. Milyen n értékre kezdenek ismétlődni a távolságok?
+
+

@@ -1,0 +1,50 @@
+________________________________________________________________
+
+Cél:
+
+Származtatás
+protected(#), virtual
+Osztályok közötti kapcsolatok
+tartalmazási kapcsolat
+egy-a-sokhoz kapcsolat megvalósítása
+
+Implementálja az alábbi diagramon látható osztályokat, majd tesztelje az implementációját.
+
+Készítsen egy inserter operátort a Szemely osztályhoz (önálló függvény, nem
+friend), amely meghívja a virtuális print függvényt (polimorfikus). Ennek
+________________________________________________________________
+következtében az inserter operátor működni fog a származtatott osztályok
+példányaira is. (Szemely.h - deklaráció, Szemely.cpp -implementáció)
+Egészítse ki a diagramon látható Alkalmazott osztályt egy id adattaggal (protected)
+és oldja meg ennek a generálását. Készítsen get metódust az id adattaghoz.
+A Manager osztályhoz adjon hozzá egy publikus statikus konstans adattagot a
+manager munkakör ábrázolásához
+const string Manager::MANAGER_MUNKAKOR = "manager";
+A Manager osztály tartalmazási kapcsolatban van az Alkalmazott osztállyal: egy
+manager több alkalmazottat is felügyel. Ez a kapcsolat egy gyenge tartalmazási
+kapcsolat: a manager csak ismeri/hozzáfér az alkalmazottakhoz, de nem birtokolja
+azokat (beosztottak adattag típusa!!!).
+A Manager osztályban módosítsa az Alkalmazott törlését úgy, hogy ez id alapján
+történjen.
+A Manager osztály print metódusa a következőképpen jelenítse meg a beosztottakat:
+Manager <id> <vezteknev> <keresztnev> beosztottjai:
+Alkalmazott <id> <vezteknev> <keresztnev> <munkakor>
+Alkalmazott <id> <vezteknev> <keresztnev> <munkakor>
+…
+Készítsen egy Cég osztályt, amely alkalmazottak nyilvántartását végzi. Tegye
+lehetővé a következő műveleteket:
+új személy alkalmazása
+létező alkalmazott elbocsátása (id alapján)
+alkalmazott hozzárendelése managerhez
+alkalmazott leválasztása managertől
+összes alkalmazott listázása
+csak manager típusú alkalmazottak listázása
+main:
+Hozzon létre egy céget
+Alkalmazzon 10 személyt, ebből 3 legyen manager típusú
+Listázza az alkalmazottakat
+A 7 nem Manager típusú alkalmazott mindenikét rendelje hozzá
+tetszőlegesen valamely managerhez
+Listázza csak a manager típusú alkalmazottakat
+Helyezze át az egyik alkalmazottat egyik managertől a másikhoz
+Listázza csak a manager típusú alkalmazottakat
